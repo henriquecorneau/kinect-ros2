@@ -4,3 +4,4 @@ ros2_ws/install/
 ros2_ws/log/
 bags/tello_1/
 bags/turtle_bot_4/
+bags/kinect/

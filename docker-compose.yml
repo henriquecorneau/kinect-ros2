@@ -1,15 +1,16 @@
 services:
-  orbslam:
+  kinect:
     build:
       context: .
       dockerfile: Dockerfile
       args:
         USER_UID: 1000
         USER_GID: 1000
-    image: orbslam3-modular:humble
-    container_name: orbslam3_dev
+    image: ros2_modular:humble
+    container_name: ros2_dev 
     stdin_open: true
     tty: true
+    privileged: true
     network_mode: host
     environment:
       - DISPLAY=${DISPLAY}
@@ -20,4 +21,5 @@ services:
       - ./bags:/home/dev/bags
       - ./config:/home/dev/config
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /dev/bus/usb:/dev/bus/usb
     command: bash
