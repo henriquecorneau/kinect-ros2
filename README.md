@@ -1,6 +1,6 @@
 # kinect-ros2
 
-Docker container with ROS 2 Humble and a node for the Kinect v1 (Xbox 360), based on [libfreenect](https://github.com/OpenKinect/libfreenect).
+Docker container with ROS 2 Humble and a node for the Kinect v1 (Xbox 360), based on [libfreenect](https://github.com/OpenKinect/libfreenect) and this [repo](https://github.com/Rinaldots/kinect_ros2).
 
 The image builds `libfreenect` from source and installs the workspace ROS dependencies. Package sources are mounted at `ros2_ws`, so `colcon` runs inside the container.
 
